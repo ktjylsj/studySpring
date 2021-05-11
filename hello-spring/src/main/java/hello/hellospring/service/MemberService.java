@@ -10,11 +10,9 @@ import java.util.Optional;
 
 // role에 맞도록 함수 이름짓는것이 특징
 // command shift t -> test 만들기
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
