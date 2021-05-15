@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Commit;
 import org.springframework.transaction.annotation.Transactional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -18,10 +19,11 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService;
-    @Autowired MemberRepository memoryMemberRepository;
+    @Autowired MemberRepository memberRepository;
 
     // test는 한글로 이름을 지어도 됌
     @Test
+    // @Commit
     void 회원가입() {
         // given 상황
         Member member = new Member();

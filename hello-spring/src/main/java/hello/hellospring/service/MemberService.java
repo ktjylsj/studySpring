@@ -4,12 +4,14 @@ import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
 // role에 맞도록 함수 이름짓는것이 특징
 // command shift t -> test 만들기
+@Transactional
 public class MemberService {
     private final MemberRepository memberRepository;
 
